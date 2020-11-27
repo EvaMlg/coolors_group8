@@ -20,7 +20,10 @@
 }
 
 body{
-    background-color: rgba(54, 55, 8, 0.179);
+    background-image: url(/images/bg2-home.jpeg);
+    background-repeat: no-repeat;
+    background-size: 105%;
+    background-position-y: -300px;
 }
 
 .navbar{
@@ -32,8 +35,9 @@ body{
 }
 
 .search{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     box-shadow: 2px 2px 10px grey;
-    background-color: rgb(226, 226, 226);
+    background-color: rgba(255, 237, 226, 0.802);
     grid-area: search;
     margin:2rem 0 0 4rem;
     padding: 0.5rem;
@@ -42,7 +46,9 @@ body{
 }
 
 ul{
+    padding: auto;
     margin-left: 4rem;
+    width: 30%;
 }
 
 li{
@@ -83,7 +89,7 @@ li{
      margin-right: 0;
      padding: 2rem 3rem 0 0;
      grid-area: btn;
-    /* background-color: gray; */
+    color: #2e2e2e;
     text-align:right;
  }
  
@@ -102,6 +108,7 @@ li{
        grid-gap: 2%;
  }
 .category1{
+    background-color: rgba(90, 50, 27, 0.474);
     grid-area: left-up;
     width: 80%;
     margin: 0 auto;
@@ -109,30 +116,35 @@ li{
     
 }
 .category2{
+    background-color: rgba(90, 50, 27, 0.474);
     grid-area: center-up;
     width: 80%;
     margin: 0 auto;
     box-shadow: 2px 2px 10px grey;
 } 
 .category3{
+    background-color: rgba(90, 50, 27, 0.474);
     grid-area: right-up;
     width: 80%;
     margin: 0 auto;
     box-shadow: 2px 2px 10px grey;
 } 
 .category4{
+    background-color: rgba(90, 50, 27, 0.474);
     grid-area: left-down;
     width: 80%;
     margin: 0 auto;
     box-shadow: 2px 2px 10px grey;
 } 
 .category5{
+    background-color: rgba(90, 50, 27, 0.474);
     grid-area: center-down;
     width: 80%;
     margin: 0 auto;
     box-shadow: 2px 2px 10px grey;
 } 
 .category6{
+    background-color: rgba(90, 50, 27, 0.474);
     grid-area: right-down;
     width: 80%;
     margin: 0 auto;
@@ -143,17 +155,117 @@ li{
 footer{
   margin-bottom: 0;
   padding: 1rem;
-  width: 100%;
+  width: 90%;
   height:48px;
-  background-color:#646262;
+  border-top: 2px solid #000000;
+  /* background-color:#646262; */
   color: white;
   font-size: 18px;
 
 }
 
 .rights{
-    background-color:#646262;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: left;
     padding-left: 40px;
+    color: #a7a7a7;
 }
 
+/* -----------------  Film page  ----------------- */
+
+
+ .imgfilmpage{
+    margin-bottom: 3%;
+    height: 50%;
+} 
+
+.pfilmpage{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 10%;
+    width: 90%;
+    margin: 0% 0% 3% 5%;
+    color:#a7a7a7;
+} 
+
+.containerfilmpage{
+    margin: 2.5rem auto 7rem auto;
+     padding: auto;
+     width:80%;
+     height: 45rem;
+     display: grid;
+     grid-template-columns:1fr 1fr 1fr;
+     grid-template-rows:1fr 1fr 1fr;
+     grid-template-areas: 
+       "left-up center-up right-up "
+       "left-down center-down right-down";
+       grid-gap: 2%;
+}
+
+.fcategory1{
+    background-color: rgba(90, 50, 27, 0.474);
+    grid-area: left-up;
+    width: 80%;
+   height: 90%;
+    margin: 0 auto;
+    box-shadow: 2px 2px 10px grey;
+    border-radius: 5px;
+    
+}
+.fcategory2{
+    background-color: rgba(90, 50, 27, 0.474);
+    grid-area: center-up;
+    width: 80%;
+    height: 90%; 
+    margin: 0 auto;
+    box-shadow: 2px 2px 10px grey;
+    border-radius:5px;
+} 
+.fcategory3{
+    background-color: rgba(90, 50, 27, 0.474);
+    grid-area: right-up;
+    width: 80%;
+    height: 90%;   
+    margin: 0 auto;
+    box-shadow: 2px 2px 10px grey;
+    border-radius: 5px;
+} 
+.fcategory4{
+    background-color: rgba(90, 50, 27, 0.474);
+    grid-area: left-down;
+    width: 80%;
+    height: 90%;
+    margin: 0 auto;
+    box-shadow: 2px 2px 10px grey;
+    border-radius: 5px;
+} 
+.fcategory5{
+    background-color: rgba(90, 50, 27, 0.474);
+    grid-area: center-down;
+    width: 80%;
+    height: 90%;
+    margin: 0 auto;
+    box-shadow: 2px 2px 10px grey;
+    border-radius: 5px;
+} 
+.fcategory6{
+    background-color: rgba(90, 50, 27, 0.474);
+    grid-area: right-down;
+    width: 80%;
+    height: 90%;
+    margin: 0 auto;
+    box-shadow: 2px 2px 10px grey;
+    border-radius:5px;
+} 
+
+.footerfilmpage{
+    margin: 0 auto;
+    padding: 1rem;
+    width: 96%;
+    height:48px;
+    /* background-color:#646262; */
+    color: white;
+    font-size: 18px;
+  
+  }
+  
+  
