@@ -2,10 +2,11 @@
 session_start();
 if(isset($_POST['username']) && isset($_POST['password']))
 {
-    // connexion à la base de données
-    $db_username = 'root';
-    $db_password = 'mot_de_passe_bdd';
-    $db_name     = 'nom_bdd';
+   echo "ok";
+    // connexion à la base de données (à mettre dans un autre doc)
+    $db_username = 'usersName';
+    $db_password = 'usersPwd';
+    $db_name     = 'users_sql';
     $db_host     = 'localhost';
     $db = mysqli_connect($db_host, $db_username, $db_password,$db_name)
            or die('could not connect to database');
