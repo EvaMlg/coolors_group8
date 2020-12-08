@@ -1,5 +1,6 @@
+
 <html lang="en">
-    <head>
+    <head> 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>COOLOR FILMS</title>
@@ -74,12 +75,19 @@
                 <!-- Row 1 -->
                 <div class="row mb-5">
                     <!-- Col 1 -->
+                   <?php foreach ($films['color'] as $colorUnit):
+            if (color=="blue"){
+                
+            } echo color 
+                    echo $name?> 
+                   <?php endforeach;?>
+
                     <div class="col-md-6 col-lg-3 p-3 text-center">
                         <div class="card p-3 text-center shadow-sm shadow-y">
                             <img src="../public/images/pantone/coolorsblue.jpg" class="card-img-top" alt="pantone">
 
                             <div class="card-body text-left">
-                                <h5 class="card-title">BLUUE</h5>
+                                <h5 class="card-title">BLUUE</h5> <!-- Afficher le titre du film depuis la DB  -->
                                 <p class="card-text"> #104B83 </p>
                             </div>
 
@@ -90,57 +98,6 @@
                         </div>
                     </div>  
                     
-                    <!-- Col 2 -->
-                    <div class="col-md-6 col-lg-3 p-3 text-center ">
-                        <div class="card p-3  text-center shadow-sm shadow-y" >
-                            <img src="../public/images/pantone/coolorsyellow.jpg" class="card-img-top" alt="pantone">
-
-                            <div class="card-body text-left">
-                                <h5 class="card-title">YELLOOW</h5>
-                                <p class="card-text">#FED601</p>
-                            </div>
-
-                            <div class="card-footer text-center border-0 bg-transparent">
-                                <hr class="w-25 mx-auto mb-4">
-                                <a href="#" class="btn btn-outline-warning mb-2 ">Watch here</a>
-                            </div>
-                        </div>
-                    </div>  
-
-                    <!-- Col 3 -->
-                    <div class="col-md-6 col-lg-3 p-3  text-center ">
-                        <div class="card p-3 text-center shadow-sm shadow-y" >
-                            <img src="../public/images/pantone/coolorswhite.jpg" class="card-img-top bg-light border " alt="pantone">
-
-                            <div class="card-body text-left">
-                                <h5 class="card-title">WHIITE</h5>
-                                <p class="card-text">#FFFFFF</p>
-                            </div>
-
-                            <div class="card-footer text-center border-0 bg-transparent">
-                                <hr class="w-25 mx-auto mb-4">
-                                <a href="#" class="btn btn-outline-secondary  mb-2">Watch here</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Col 4 -->
-                    <div class="col-md-6 col-lg-3 p-3  text-center ">
-                        <div class="card p-3 text-center " >
-                            <img src="../public/images/pantone/coolorsrose.jpg" class="card-img-top" alt="pantone">
-
-                            <div class="card-body text-left">
-                                <h5 class="card-title">ROOSE</h5>
-                                <p class="card-text">#FACBCC</p>
-                            </div>
-                            
-                            <div class="card-footer text-center border-0 bg-transparent">
-                                <hr class="w-25 mx-auto mb-4">
-                                <a href="#" class="btn btn-outline-focus {
-                                    background-color: #FACBCC}  mb-2 ">Watch here</a>
-                            </div>
-                        </div>
-                    </div>
                     
                 </div> 
 
@@ -239,5 +196,6 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+
 </body>
 </html>
