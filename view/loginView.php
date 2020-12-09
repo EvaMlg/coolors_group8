@@ -7,7 +7,7 @@
         <div id="container">
             <!-- zone de connexion -->
             
-            <form action="login.php" method="POST">
+            <form action="/controller/login.php" method="POST">
                 <h1>Log In</h1>
                 
                 <label><b>User Name</b></label>
