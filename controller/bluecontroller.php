@@ -1,16 +1,26 @@
 <?php
-// créé un objet qui contient les données de la DB en se connectant à Mysql
+
+include "db.php";
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+$query = 'SELECT * FROM films';
+$stmt = $dbh->exec($query);
 try{
-$films = new PDO('mysql:host=localhost;dbname=films;charset=utf8', 'root', 'root');
+
+//$connection = new \PDO($dsn, $username, $password);
+//$films = new PDO('mysql:host=127.0.0.1;dbname=films;', 'root', 'root');
 } catch (PDOException $e) {
     print "Erreur !: " . $e->getMessage() . "<br/>";
     die();
 }
 // On récupère tout le contenu de la table films
-$reponse = $bdd->query('SELECT * FROM films');
+
+
 
 // On affiche chaque entrée une à une
-while ($datas = $reponse->fetch())
+while ($datas = $stmt->fetch())
 {
 ?>
     <?php echo $datas['name']; ?>
