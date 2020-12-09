@@ -1,11 +1,8 @@
 <?php
 // créé un objet qui contient les données de la DB en se connectant à Mysql
-try{
-$films = new PDO('mysql:host=localhost;dbname=films;charset=utf8', 'root', 'root');
-} catch (PDOException $e) {
-    print "Erreur !: " . $e->getMessage() . "<br/>";
-    die();
-}
+
+$bdd = new PDO('mysql:host=127.0.0.1;dbname=films', 'root', 'root');
+
 // On récupère tout le contenu de la table films
 $reponse = $bdd->query('SELECT * FROM films');
 
