@@ -1,21 +1,26 @@
 <?php
 
+//in this file, the functions that we created in functions.inc.php are being called
+//when the user submits the data (= 'when submit is set')
+
 if(isset($_POST["submit"])){
     
     $name=$_POST["name"];
-    $mail=$_POST["uid"];
-    $username=$_POST["email"];
+    $username=$_POST["uid"];
+    $email=$_POST["email"];
     $pwd=$_POST["pwd"];
     $pwdRepeat=$_POST["pwdrepeat"];
 
+    //link to other files in same folder
     require_once 'dbh.inc.php';
     require_once 'functions.inc.php';
 
-    if(emptyInputSignup($name, $uid, $email, $pwd, $pwdrepeat)!==false){
+    //ERROR HANDLERS: you can add as many as you want - checks for errors & defines what shoudl happen when we run into them
+    if(emptyInputSignup($name, $username, $email, $pwd, $pwdRepeat)!==false){
         header("location: ../signup.php?error=emptyinput");
         exit();
     }
-    if(invalidUid($uid)!==false){
+    if(invalidUid($username)!==false){
         header("location: ../signup.php?error=invaliduid");
         exit();
     }
@@ -23,22 +28,22 @@ if(isset($_POST["submit"])){
         header("location: ../signup.php?error=invalidemail");
         exit();
     }
-    if(pwdMatch($pwd, $pwdrepeat)!==false){
+    if(pwdMatch($pwd, $pwdRepeat)!==false){
         header("location: ../signup.php?error=differentpasswords");
         exit();
     }
-    if(uidTaken($conn, $uid, $email)!==false){
-        header("location: ../signup.php?error=usernametaken");
+    if (uidExist($conn, $username, $email)!==false){
+        header("location: ../signup.php?error=userexists");
         exit();
     }
 
     createUser($conn, $name, $email, $username, $pwd);
-
-    // // else{
-    // //     header("location: ../signup.php");
-    // //     exit();
-    // // }
 }
+    else{
+        header("location: ../signup.php");
+        exit();
+    }
+
 
 
 
