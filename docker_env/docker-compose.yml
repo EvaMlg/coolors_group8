@@ -10,7 +10,7 @@ services:
       - 80:80
     restart: always
     volumes:
-      - ./application/source:/var/www/html
+      - /Users/evamarechal/Desktop/BECODE/COOLORS/docker_env/application/source/coolors_group8:/var/www/html
     env_file:
       - ./docker.env
     networks:
@@ -24,6 +24,8 @@ services:
     volumes:
       - ./database:/docker-entrypoint-initdb.d/
       - becode_data:/var/lib/mysql
+    ports:
+      - 3307:3306
     env_file:
       - ./docker.env
     networks:
