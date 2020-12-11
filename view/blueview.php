@@ -1,4 +1,6 @@
-
+<?php 
+    include "../controller/bluecontroller.php";
+?>
 <html lang="en">
     <head> 
         <meta charset="UTF-8">
@@ -75,29 +77,46 @@
                 <!-- Row 1 -->
                 <div class="row mb-5">
                     <!-- Col 1 -->
-                   <?php foreach ($films['color'] as $colorUnit):
-            if (color=="blue"){
-                
-            } echo color 
-                    echo $name?> 
-                   <?php endforeach;?>
+                   
+                    
+
+
 
                     <div class="col-md-6 col-lg-3 p-3 text-center">
                         <div class="card p-3 text-center shadow-sm shadow-y">
                             <img src="../public/images/pantone/coolorsblue.jpg" class="card-img-top" alt="pantone">
 
                             <div class="card-body text-left">
-                                <h5 class="card-title">BLUUE</h5> <!-- Afficher le titre du film depuis la DB  -->
-                                <p class="card-text"> #104B83 </p>
+                                <h5 class="card-title">
+                                    
+                                    <?php $query = "SELECT color, name FROM films WHERE color='blue'";
+                                    // execution de la requête sur la DB
+                                    $stmt = $dbh->query($query);
+                                    var_dump($stmt->fetch());
+                                    //  while($result = $stmt->fetch())
+                                    //     {
+                                    //         echo $result['name'];  
+                                    //     }  
+                                    ?></h5> <!-- Afficher le titre du film depuis la DB  -->
+                                <p class="card-text"> 
+                                    <?php $query = "SELECT years FROM films WHERE color='blue'";
+                                    // execution de la requête sur la DB
+                                    $stmt = $dbh->query($query);
+                                     while($result = $stmt->fetch())
+                                        {
+                                            echo $result['years'];  
+                                        }  
+                                    ?> 
+                                </p>
                             </div>
 
                             <div class="card-footer text-center border-0 bg-transparent">
                                 <hr class="w-25 mx-auto mb-4">
-                                <a href="../view/blue.php" class="btn btn-outline-primary mb-2"> Watch here</a>
+                                <a href="../view/blueview.php" class="btn btn-outline-primary mb-2"> Watch here</a>
                             </div>
                         </div>
                     </div>  
-                    
+                   
                     
                 </div> 
 
